@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../CSS/style1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/fdf8248e9d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <title>Web Travel</title>
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-atas">
+        <div class="nav">
+          <h1>ES <span class="color">CODE</span></h1>
+          <ul class="link">
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Flight</a></li>
+            <li><a href="#">Vocation</a></li>
+            <li><a href="./rental.html">Rentals</a></li>
+          </ul>
+
+          <ul class="log">
+            <li class="login login-trigger">Login / Signup</li>
+            <!-- <li class="signup">Sign Up</li> -->
+          </ul>
+        </div>
+
+        <div id="login" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+                <div class="container" id="container">
+                  <div class="form-container sign-up-container">
+                    <form action="#" class="form-reg">
+                      <h1 class="judul-register">Create Account</h1>
+                      <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <span class="desc-bottom">or use your email for registration</span>
+                      <input type="text" class="input-data" placeholder="Name" />
+                      <input type="email" class="input-data" placeholder="Email" />
+                      <input type="password" class="input-data" placeholder="Password" />
+                      <button class="btn-login">Sign Up</button>
+                    </form>
+                  </div>
+                  <div class="form-container sign-in-container">
+                    <form action="#" class="form-signin">
+                      <h1 class="judul-register">Sign in</h1>
+                      <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+                      <span class="desc-bottom">or use your account</span>
+                      <input type="email" class="input-data" placeholder="Email" />
+                      <input type="password" class="input-data" placeholder="Password" />
+                      <a href="#" class="social">Forgot your password?</a>
+                      <button class="btn-login">Sign In</button>
+                    </form>
+                  </div>
+                  <div class="overlay-container">
+                    <div class="overlay">
+                      <div class="overlay-panel overlay-left">
+                        <h1 class="judul-register">Welcome Back!</h1>
+                        <p class="desc-reg">To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                      </div>
+                      <div class="overlay-panel overlay-right">
+                        <h1 class="judul-register">Hello, Friend!</h1>
+                        <p class="desc-reg">Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-search-dashboard">
+          <div class="search">
+            <div class="input-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="" id="" placeholder="Search For Destination" />
+            </div>
+          </div>
+          <div class="dashboard">
+            <div class="dashboard-atas">
+              <div class="icon pesawat active">
+                <div class="container-icon">
+                  <button class="icon-img"><i class="fa-solid fa-plane"></i></button>
+                  <h3>Pesawat</h3>
+                </div>
+              </div>
+              <hr />
+              <div class="icon hotel">
+                <div class="container-icon">
+                  <button class="icon-img"><i class="fa-solid fa-hotel"></i></button>
+                  <h3>Hotel</h3>
+                </div>
+              </div>
+              <hr />
+              <div class="icon train">
+                <div class="container-icon">
+                  <button class="icon-img"><i class="fa-solid fa-train-subway"></i></button>
+                  <h3>Trains</h3>
+                </div>
+              </div>
+              <hr>
+              <div class="icon map">
+                <div class="container-icon">
+                  <button class="icon-img"><i class="fa-solid fa-map-location-dot"></i></button>
+                  <h3>Map</h3>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-content">
+              <div class="container-content">
+                <form class="container-search pesawat">
+                  <div class="container-pesawat">
+                    <img src="../IMG/switch.png" alt="" width="50px" class="switch">
+                    <div class="container-travel">
+                      <div class="travel">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-plane" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Stasiun Pejemputan</span><br>
+                              <span id="stp">Travel From</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel">
+                        <div class="search-input">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan">
+                        </div>
+                        <ul class="options"></ul>
+                      </div>
+                    </div>
+                    <div class="container-travel tujuan">
+                      <div class="travel tujuan">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Arrive in</span><br>
+                              <span id="stt">Arrive in</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel tujuan">
+                        <div class="search-input tujuan">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan tujuan">
+                        </div>
+                        <ul class="options tujuan"></ul>
+                      </div>
+                    </div>
+                    <div class="container-travel date">
+                      <div class="travel date">
+                        <div class="container-judul-travel date">
+                          <div class="judul-travel date">
+                            <div class="icon">
+                              <img src="../IMG/calendarIn.svg" alt="" width="25px"/>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Depature</span><br>
+                              <span class="date-input"><input type="date" placeholder="22 Oct 2022" /></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-travel kursi">
+                      <div class="travel kursi">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-user-group" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Kursi Penumpang</span><br>
+                              <span id="ksp">Amount</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel kursi">
+                        <div class="search-input kursi">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan kursi">
+                        </div>
+                        <ul class="options kursi"></ul>
+                      </div>
+                    </div>
+                </div>
+                </form>
+                <form class="container-search paket">
+                  <div class="search-dashboard">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <hr />
+                    <input type="text" placeholder="Mau Ke Kota Mana ?...." />
+                  </div>
+                  <div class="kategori_message">
+                    <div class="pesan-room">
+                      <div class="tanggal-berangkat">
+                        <img src="../IMG/calendarIn.svg" alt="" />
+                        <input type="date" placeholder="22 Oct 2022" />
+                        <!-- <div class="date">
+                                                  <label for="">25 Oct 2022</label>
+                                                  <label for="">Tuesday</label>
+                                              </div> -->
+                      </div>
+                      <hr />
+                      <div class="tanggal-keluar">
+                        <img src="../IMG/calendarOut.svg" alt="" />
+                        <input type="date" placeholder="22 Oct 2022" />
+                      </div>
+                    </div>
+                    <div class="content-bawah">
+                      <div class="select-box">
+                        <div class="option-container">
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="teman" name="passion" value="frontend" />
+                            <label for="teman" class="pil"><i class="fa-solid fa-user-group"></i> 2 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="orangtua" name="passion" value="backend" />
+                            <label for="orangtua" class="pil"><i class="fa-solid fa-user-group"></i> 3 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="dirisendiri" name="passion" value="database manager" />
+                            <label for="dirisendiri" class="pil"><i class="fa-solid fa-user-group"></i> 4 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="oranglain" name="passion" value="data scientis" />
+                            <label for="oranglain" class="pil"><i class="fa-solid fa-user-group"></i> 5 Adout</label>
+                          </div>
+                        </div>
+                        <div class="selected padding-selected">
+                          <i class="fa-solid fa-user-group"></i>
+                          1 adoult
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="container-search train">
+                  <div class="container-train">
+                    <img src="../IMG/switch.png" alt="" width="50px" class="switch">
+                    <div class="container-travel jemputTrain">
+                      <div class="travel jemputTrain">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-train-subway" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Stasiun Pejemputan</span><br>
+                              <span id="stpTrn">Travel From</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel jemputTrain">
+                        <div class="search-input">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan jemputTrain">
+                        </div>
+                        <ul class="options jemputTrain"></ul>
+                      </div>
+                    </div>
+                    <div class="container-travel tujuanTrn">
+                      <div class="travel tujuanTrn">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-location-dot" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Arrive in</span><br>
+                              <span id="sttTrn">Arrive in</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel tujuanTrn">
+                        <div class="search-input tujuanTrn">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan tujuanTrn">
+                        </div>
+                        <ul class="options tujuanTrn"></ul>
+                      </div>
+                    </div>
+                    <div class="container-travel date">
+                      <div class="travel date">
+                        <div class="container-judul-travel date">
+                          <div class="judul-travel date">
+                            <div class="icon">
+                              <img src="../IMG/calendarIn.svg" alt="" width="25px"/>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Depature</span><br>
+                              <span class="date-input"><input type="date" placeholder="22 Oct 2022" /></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-travel kursiTrn">
+                      <div class="travel kursiTrn">
+                        <div class="container-judul-travel">
+                          <div class="judul-travel">
+                            <div class="icon">
+                              <i class="fa-solid fa-user-group" style="font-size: 20px;"></i>
+                            </div>
+                            <div class="travel-klik">
+                              <span>Kursi Penumpang</span><br>
+                              <span id="kspTrain">Amount</span>
+                            </div>
+                          </div>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                      </div>
+                      <div class="content-travel kursiTrn">
+                        <div class="search-input kursiTrn">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                          <input type="text" placeholder="Search" class="search-pilihan kursiTrn">
+                        </div>
+                        <ul class="options kursiTrn"></ul>
+                      </div>
+                    </div>
+                </div>
+                </form>
+                <form class="container-search map">
+                  <div class="search-dashboard">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <hr />
+                    <input type="text" placeholder="Mau Ke Kota Mana ?...." />
+                  </div>
+                  <div class="kategori_message">
+                    <div class="pesan-room">
+                      <div class="tanggal-berangkat">
+                        <img src="../IMG/calendarIn.svg" alt="" />
+                        <input type="date" placeholder="22 Oct 2022" />
+                        <!-- <div class="date">
+                                                  <label for="">25 Oct 2022</label>
+                                                  <label for="">Tuesday</label>
+                                              </div> -->
+                      </div>
+                      <hr />
+                      <div class="tanggal-keluar">
+                        <img src="../IMG/calendarOut.svg" alt="" />
+                        <input type="date" placeholder="22 Oct 2022" />
+                      </div>
+                    </div>
+                    <div class="content-bawah">
+                      <div class="select-box select-box2">
+                        <div class="option-container option-container2">
+                          <div class="opsi opsi2">
+                            <input type="radio" class="radio" id="teman" name="passion" value="frontend" />
+                            <label for="teman" class="pil"><i class="fa-solid fa-user-group"></i> 2 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="orangtua" name="passion" value="backend" />
+                            <label for="orangtua" class="pil"><i class="fa-solid fa-user-group"></i> 3 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="dirisendiri" name="passion" value="database manager" />
+                            <label for="dirisendiri" class="pil"><i class="fa-solid fa-user-group"></i> 4 Adout</label>
+                          </div>
+                          <div class="opsi">
+                            <input type="radio" class="radio" id="oranglain" name="passion" value="data scientis" />
+                            <label for="oranglain" class="pil"><i class="fa-solid fa-user-group"></i> 5 Adout</label>
+                          </div>
+                        </div>
+                        <div class="selected selected2 padding-selected">
+                          <i class="fa-solid fa-user-group"></i>
+                          1 adoult
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="button-search-ticket">
+              <button type="submit"><i class="fa-solid fa-ticket"></i> CARI TICKET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diskon-akun">
+        <div class="icon">
+          <img src="../IMG/calendar 3.png" alt="" />
+        </div>
+        <div class="text">
+          <p>Create new acount,untuk mendapatkan discounts!</p>
+          <p>You can save up to 50 % Off</p>
+        </div>
+        <div class="button-diskon">
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="poster"></div>
+      <div class="top-wisata">
+        <div class="judul">
+          <h1>Top Destination In Indonesia</h1>
+          <!-- <hr> -->
+        </div>
+        <div class="content-wisata owl-carousel owl-theme" id="wisata">
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/detail-bells-borobudur-temple-indonesia 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Jogjakarta</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/maluku 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Maluku</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/Museum-Kota-Lama-Semarang 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Semarang</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/tangerang 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Tangerang</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/water-temple-bratan-lake 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Bali</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+
+          <div class="container-wisata item">
+            <img src="../IMG/KOTA/complex-aerial-view-city 1.png" alt="" />
+            <div class="nama-kota">
+              <p>Jakarta</p>
+            </div>
+            <div class="hotel">
+              <p>0 Acomondation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-travel">
+        <div class="judul">
+          <h1>More Place To Travel</h1>
+        </div>
+
+        <div class="pilihan-travel">
+          <ul>
+            <li class="list-category active" data-filter="all">All</li>
+            <li class="list-category" data-filter="bali">Bali</li>
+            <li class="list-category" data-filter="jakarta">Jakarta</li>
+            <li class="list-category" data-filter="jogja">Jogjakarta</li>
+            <li class="list-category" data-filter="jatim">Jatim</li>
+            <li class="list-category" data-filter="magelang">Magelang</li>
+          </ul>
+        </div>
+
+        <div class="content-more-travel">
+          <div class="container-travel itemBox bali">
+            <img src="../IMG/ubud bali 1.png" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Aksari Resordt Ubud (Hotel)</h3>
+              <p>IDR 2.688.000</p>
+            </div>
+          </div>
+
+          <div class="container-travel itemBox magelang">
+            <img src="../IMG/Gunung Sindoro.jpg" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Gunung Sindoro</h3>
+              <p>IDR 200,000</p>
+            </div>
+          </div>
+
+          <div class="container-travel itemBox jogja">
+            <img src="../IMG/malioboro.jpg" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Malioboro</h3>
+              <p>IDR 250,000</p>
+            </div>
+          </div>
+
+          <div class="container-travel itemBox jatim">
+            <img src="../IMG/selecta.jpg" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Taman Rekreasi Selecta</h3>
+              <p>IDR 40,000</p>
+            </div>
+          </div>
+
+          <div class="container-travel itemBox jatim">
+            <img src="../IMG/Jatim Park 1.jpg" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Jatim Park 1</h3>
+              <p>IDR 95,000</p>
+            </div>
+          </div>
+
+          <div class="container-travel itemBox jakarta">
+            <img src="../IMG/wisata-tmii_169.jpeg" alt="" width="298px" />
+            <div class="text-travel">
+              <h3>Taman Mini Indonesia Indah</h3>
+              <p>IDR 500,000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="content-kiri-footer">
+        <div class="content-atas-footer">
+          <div class="desc-teks-atas-footer">
+            <a href="#">Login</a>
+            <a href="#">About</a>
+            <a href="#">Discounts</a>
+            <a href="#">Testimoni</a>
+          </div>
+          <div class="desc-teks-atas-footer">
+            <a href="#">Security</a>
+            <a href="#">FaQs</a>
+            <a href="#">Features</a>
+            <a href="#">Forum</a>
+          </div>
+          <div class="desc-teks-atas-footer">
+            <a href="#">Developer</a>
+            <a href="#">Design Inpiration</a>
+            <a href="#">Lowongan Pekerja</a>
+            <a href="#">School Escode</a>
+          </div>
+          <div class="desc-teks-atas-footer">
+            <a href="#">Cookies</a>
+            <a href="#">Privasi Police</a>
+            <a href="#">Ugm</a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>2022 Copyright &copy; <span>||</span> Create By Deland & Geusan & Tegar<span> ||</span> Made in Escode</p>
+        </div>
+      </div>
+      <div class="content-tengah-footer">
+        <div class="social-media">
+          <div class="jdl-social">
+            <h3>Follow Us Social Media</h3>
+            <hr />
+          </div>
+          <div class="icon-sosmed">
+            <a href="https://www.instagram.com/escode.ska/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/628979341242"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="sposor">
+          <h3>Sponsorship</h3>
+          <hr />
+          <div class="logo-sponsor">
+            <a href="https://www.ugm.ac.id/" target="_blank"><img src="../IMG/ugm.png" alt="" /></a>
+            <a href="https://www.sinarmas.com/" target="_blank"><img src="../IMG/sinarmas.jpg" alt="" /></a>
+            <a href="https://www.astra.co.id/" target="_blank"><img src="../IMG/logo astra.jpg" alt="" /></a>
+            <a href="http://www.smkn5solo.sch.id/" target="_blank"><img src="../IMG/logo smkn5.jpg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="content-kanan-footer">
+        <div class="info-footer">
+          <div class="telp info">
+            <i class="fa-solid fa-phone-volume"></i>
+            <p>08979341242</p>
+          </div>
+          <div class="map info">
+            <i class="fa-solid fa-map-location"></i>
+            <p>Jln Adi Sucipto,Kerten,Surakarta</p>
+          </div>
+          <div class="email info">
+            <i class="fa-solid fa-envelope-circle-check"></i>
+            <p>escode2022@gmail.com</p>
+          </div>
+        </div>
+        <div class="pesan-footer">
+          <form action="">
+            <label>Kirim Pesan ke Admin</label>
+            <div class="input">
+              <input type="text" placeholder="Type here" />
+              <button type="submit" class="btn-tombol">
+                <span class="send">Send Message</span>
+                <i class="fa-solid fa-paper-plane plane"></i>
+                <span class="sent">Message Sent</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        let nav = document.querySelector(".nav");
+        nav.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+
+    <script>
+      $("#wisata").owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          600: {
+            items: 4,
+          },
+          1000: {
+            items: 6,
+          },
+        },
+      });
+    </script>
+    <!-- JQuery Card -->
+    <script>
+      $(document).ready(function () {
+        $(".list-category").click(function () {
+          const value = $(this).attr("data-filter");
+          if (value == "all") {
+            $(".itemBox")
+            .show(0);
+          } else {
+            $(".itemBox")
+              .not("." + value)
+              .hide(0);
+            $(".itemBox")
+              .filter("." + value)
+              .show(0);
+          }
+        });
+        // active class
+        $(".list-category").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

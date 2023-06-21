@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escode Travel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="container-nav">
+                <div class="logo">
+                    <img src="" alt="">
+                    <p class="absensi">Escode Travel</p>
+                </div>
+                <ul>
+                    <li><a href="../Dashboard/index.html">Home</a></li>
+                    <li><a href="../Dashboard/login.html">Join</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="form-login">
+            <div class="container-login">
+                <div class="login-top">
+                    <p class="free">LIBURAN DENGAN PROMO </p>
+                    <h1 class="judul"><span class="titik"></span></h1>
+                    <!-- <span>Already A Member? <a href="">Log in</a></span> -->
+                </div>
+                <div class="fill-form">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                    </div>
+                    <form class="input-group login" id="login" action="">
+                        <div class="user-detail">
+                            <div class="input-box">
+                                <label class="details color putih">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter email" autocomplete="off" required>
+                                <i class="fa-solid fa-envelope icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <label class="details putih color">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Enter password" autocomplete="off" required>
+                                <i id="hide1" class="fa-solid fa-eye icon" onclick="myFunction()"></i>
+                                <i id="hide2" class="fa-solid fa-eye-slash icon" onclick="myFunction()"></i>
+                            </div>
+                            <p class="forgot"><a href="">Lupa Password?</a></p>
+                            <div class="button">
+                                <!-- <button class="method tombol">Change Method</button> -->
+                                <button class="log-in pencet">Log In</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="input-group register" id="register" action="">
+                        <div class="user-detail">
+                            <div class="input-name">
+                                <div class="input-box name">
+                                    <label class="details putih color">First Name</label>
+                                    <input type="text" id="first-name" class="input" name="first-name" placeholder="Enter first name" autocomplete="off" required>
+                                    <i class="fa-solid fa-address-card icon"></i>
+                                </div>
+                                <div class="input-box name">
+                                    <label class="details putih color">Last Name</label>
+                                    <input type="text" id="last-name" class="input" name="last-name" placeholder="Enter last name" autocomplete="off" required>
+                                    <i class="fa-solid fa-address-card icon"></i>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label class="details putih color">Email</label>
+                                <input type="email" id="email" class="input" name="email" placeholder="Enter email" autocomplete="off" required>
+                                <i class="fa-solid fa-envelope icon"></i>
+                            </div>
+                            <div class="input-box">
+                                <label class="details putih color">Password</label>
+                                <input type="password" class="input" id="password1" name="password" placeholder="Enter password" autocomplete="off" required>
+                                <i id="hide3" class="fa-solid fa-eye icon" onclick="myFunction1()"></i>
+                                <i id="hide4" class="fa-solid fa-eye-slash icon" onclick="myFunction1()"></i>
+                            </div>
+                            <div class="button">
+                                <button class="method pencet">Change Method</button>
+                                <a href="../Tugas_10/index.html">
+                                    <button type="button" class="create pencet">Create account</button>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- <div id="open-modal" class="modal-window">
+        <div>
+            <article class="modal-container">
+                <header class="modal-container-header">
+                    <h1 class="modal-container-title">
+                        Terms and Conditions
+                    </h1>
+                    <button class="icon-button" onclick="location.href='#';">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
+                        </svg>
+                    </button>
+                </header>
+                <section class="modal-container-body">
+                    <h2>Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur.</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Unum nescio, quo modo possit, si luxuriosus sit, finitas cupiditates habere. Hoc est non modo cor  </p>
+
+                    <h3>Ut proverbia non nulla veriora sint quam vestra dogmata.</h3>
+
+                    <p>Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Tria genera cupiditatum, naturales et necessariae, naturales et non necessariae, nec naturales nec necessariae. Sin aliud quid voles, postea. Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; </p>
+
+                    <p>Cur igitur easdem res, inquam, Peripateticis dicentibus verbum nullum est, quod non intellegatur? Primum in nostrane potestate est, quid meminerimus? Eam tum adesse, cum dolor omnis absit; Quodsi ipsam honestatem undique pertectam atque absolutam. Aliam vero vim voluptatis esse,  </p>
+
+                    <h2>An hoc usque quaque, aliter in vita?</h2>
+                    <ol>
+                        <li>Etenim nec iustitia nec amicitia esse omnino poterunt, nisi ipsae per se expetuntur.</li>
+                        <li>Pisone in eo gymnasio, quod Ptolomaeum vocatur, unaque nobiscum Q.</li>
+                        <li>Certe nihil nisi quod possit ipsum propter se iure laudari.</li>
+                        <li>Itaque e contrario moderati aequabilesque habitus, affectiones ususque corporis apti esse ad naturam videntur.</li>
+                    </ol>
+
+                    <p>Utilitatis causa amicitia est quaesita. Qui autem de summo bono dissentit de tota philosophiae ratione dissentit. Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Sed emolumenta communia esse dicuntur, recte autem facta et peccata non habentur communia.  </p>
+
+                    <h3>Claudii libidini, qui tum erat summo ne imperio, dederetur.</h3>
+
+                    <p>Eorum enim est haec querela, qui sibi cari sunt seseque diligunt. Cum audissem Antiochum, Brute, ut solebam, cum M. An obliviscimur, quantopere in audiendo in legendoque moveamur, cum pie, cum amice, cum magno animo aliquid factum cognoscimus? Qui igitur convenit ab alia voluptate dicere naturam proficisci, in alia summum bonum ponere? Magni enim aestimabat pecuniam non modo non contra leges, sed etiam legibus partam.  </p>
+
+                    <h2>Sed nimis multa.</h2>
+
+                    <p>Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Negat enim summo bono afferre incrementum diem. Causa autem fuit huc veniendi ut quosdam hinc libros promerem.  </p>
+
+                </section>
+                <footer class="modal-container-footer">
+                    <button class="tombol is-ghost" onclick="location.href='#;'">Decline</button>
+                    <button type="submit" class="tombol is-primary" onclick="location.href='#;'">Accept</button>
+                </footer>
+            </article>
+        </div>
+    </div> -->
+    <img src="../img/garis5.png" class="garis">
+    <div class="gambar">
+        <img src="../img/wong.png" class="garis wong">
+        <img src="../img/wong1.png" class="garis wong1">
+        <img src="../img/earth.png" class="garis earth">
+        <img src="../img/rocket.png" class="garis rocket">
+        <!-- <img src="gif/5.png" alt="gif" width="700px"> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        // gsap.to('.judul', {duration: 2, text: 'Selamat datang di Ekskul Coding.'})
+        // gsap.to('.titik', {duration: 1, delay: 1, text: 'Halo'});
+        gsap.from('.free', {duration: 1, delay: 1, x: -100, opacity: 0});
+        gsap.from('.absensi', {duration: 1, delay: 1, y: -100, opacity: 0, ease: 'bounce'});
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById('password');
+            var y = document.getElementById('hide1');
+            var z = document.getElementById('hide2');
+
+            if(x.type === 'password') {
+                x.type = 'text';
+                y.style.display = 'block';
+                z.style.display = 'none';
+            }
+            else {
+                x.type = 'password';
+                y.style.display = 'none';
+                z.style.display = 'block';
+            }
+        }
+
+        function myFunction1() {
+            var x = document.getElementById('password1');
+            var y = document.getElementById('hide3');
+            var z = document.getElementById('hide4');
+
+            if(x.type === 'password') {
+                x.type = 'text';
+                y.style.display = 'block';
+                z.style.display = 'none';
+            }
+            else {
+                x.type = 'password';
+                y.style.display = 'none';
+                z.style.display = 'block';
+            }
+        }
+
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+
+        function register() {
+            x.style.left = '-700px';
+            y.style.left = '0';
+            z.style.left = '110px';
+        }
+
+        function login() {
+            x.style.left = '0';
+            y.style.left = '650px';
+            z.style.left = '0';
+        }
+    </script>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        let labels = document.querySelectorAll('label');
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add('checked');
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+
+            if(this.value == '') {
+                parent.classList.remove('checked');
+            }
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', focusFunc);
+            input.addEventListener('blur', blurFunc);
+        })
+    </script>
+
+    <script>
+        var typing=new Typed(".judul", {
+			strings: [ "", "Daftar Akun Di Escode Travel"],
+			typeSpeed: 100,
+			backSpeed: 40,
+			loop: true,
+		});
+    </script>
+
+    <script>
+        const button = document.querySelector('.create');
+        const input = document.querySelectorAll('.input');
+
+        button.addEventListener('click', () => {
+            button.classList.toggle('muncul')
+        })
+    </script>
+
+    <!-- <script>
+        const absensi = document.querySelector('.absensi');
+
+        absensi.addEventListener('load', function() {
+            absensi.style.transform = 'scale(1)';
+        })
+    </script> -->
+</body>
+</html>
